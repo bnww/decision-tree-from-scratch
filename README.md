@@ -1,7 +1,7 @@
 # Decision Trees
 ## A decision tree algorithm coded from scratch
-#### FurtherAI_DecisionTrees.ipynb contains the implementation of the algorithm, with explanations at each step of the way.
-#### Trees are created for weather data toy dataset (weather-data.csv) and Covid-19 data (covid-data.csv)
+#### `FurtherAI_DecisionTrees.ipynb` contains the implementation of the algorithm, with explanations at each step of the way.
+#### Trees are created for weather data toy dataset `weather-data.csv` and Covid-19 data `covid-data.csv`
 
 ## Algorithm explanation and results
 I decided to implement the **ID3 algorithm**, using the ‘Learn-Decision-Tree’ pseudocode from Russell and Norvig, 2021 (p678). I used Pandas DataFrames as the main data structure as this offers a powerful way to manipulate columns within a dataset. The algorithm uses the ‘find_next_split’ function to find the best node to split the remaining data on. This is based on which node (feature) provides the highest information gain, which is calculated using the weighted entropies of all the values of the node. Whichever node is found to be best to split the data on is then added to the tree, and the various subtrees are explored in the same way, stopping when the data is pure or when the maximum depth of the tree is reached. If the tree reaches the maximum depth it makes a prediction based on the majority class of the values left in the remaining data.
